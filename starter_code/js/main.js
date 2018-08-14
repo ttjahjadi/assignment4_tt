@@ -13,8 +13,8 @@
 // This is to prevent from any a tag to scroll up when its running a function
 $('.readmore a, .readless a, .learnmore').click(function(){
     event.preventDefault()
-
 })
+
 
 $('.readmore a').click(function() {
     $('#show-this-on-click').slideDown(500)
@@ -34,3 +34,5 @@ $('.learnmore').click(function(){
     $('.learnmore').hide()
 
 })
+
+
