@@ -9,7 +9,6 @@
 //     // you can write here
 // })
 
-var readmore = true
 
 // This is to prevent from any a tag to scroll up when its running a function
 $('.readmore a, .readless a, .learnmore').click(function(){
