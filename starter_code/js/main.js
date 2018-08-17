@@ -11,21 +11,32 @@
 
 
 // This is to prevent from any a tag to scroll up when its running a function
-$('.readmore a, .readless a, .learnmore').click(function(){
+$('a, .readmore a, .readless a, .learnmore').click(function(){
     event.preventDefault()
 })
 
+// old code
+// $('.readmore a').click(function() {
+//     $('#show-this-on-click').slideDown(500)
+//     $('.readless').removeClass('hide')
+//     $('.readmore').hide()
+// })
 
+// $('.readless a').click(function() {
+//     $('#show-this-on-click').slideUp(500)
+//     $('.readless').addClass('hide')
+//     $('.readmore').show()
+// })
+
+// new code
 $('.readmore a').click(function() {
-    $('#show-this-on-click').slideDown(500)
-    $('.readless').removeClass('hide')
-    $('.readmore').hide()
-})
+    $('#show-this-on-click').slideToggle('slow')
+    var newText = $('.readmore a').text("Read less")
+    if(newText === "Read less"){
+        $('.readmore a').text("Read more")
+    }
+    // $('.readmore').html("<a href='#'>Read less</a>")
 
-$('.readless a').click(function() {
-    $('#show-this-on-click').slideUp(500)
-    $('.readless').addClass('hide')
-    $('.readmore').show()
 })
 
 
